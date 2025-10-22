@@ -1,16 +1,4 @@
-# C2E - Context-to-Evidence System
-
-A Python-based RAG (Retrieval-Augmented Generation) system with PubMed integration for biomedical literature search.
-
-## Features
-
-- **LLM Integration**: Call local Ollama models for text generation
-- **RAG Architecture**: Extensible base class for implementing different RAG strategies
-- **PubMed API**: Search and retrieve biomedical papers from NCBI databases
-- **PMC Full-Text**: Access open-access full-text papers from PubMed Central
-- **Environment Configuration**: Secure API key management via `.env` files
-
-## Installation
+# C2E - Claim to Evidence System
 
 ```bash
 pip install -r requirements.txt
@@ -85,6 +73,3 @@ c2e/
 ├── .env.example         # Environment template
 └── requirements.txt
 ```
-
-## Self RAG
-## FLARE
