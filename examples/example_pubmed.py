@@ -16,7 +16,52 @@ from helpers.pubmed import (
     fetch_paper_details,
     fetch_pmc_fulltext,
     get_paper_url,
+    set_api_key,
 )
+
+
+def setup_api_key_example():
+    """Example showing how to set up the NCBI API key."""
+    print("=" * 60)
+    print("NCBI API Key Setup")
+    print("=" * 60)
+
+    # Try to load from .env file first
+    print("\nAttempting to load API key from .env file...")
+    set_api_key()  # This will load from .env if available
+
+    from Bio import Entrez
+
+    if Entrez.api_key:
+        print(f"✓ API key loaded from .env file!")
+        print(f"✓ Email: {Entrez.email}")
+        print("You can now make up to 10 requests per second.\n")
+        return
+
+    print("\nNo .env file found or API key not set.")
+    print("To get better rate limits (10 req/s vs 3 req/s),")
+    print("get a free API key from:")
+    print("https://www.ncbi.nlm.nih.gov/account/settings/")
+    print("\nTip: Create a .env file in the project root with:")
+    print("  NCBI_API_KEY=your_api_key_here")
+    print("  NCBI_EMAIL=your.email@example.com")
+    print()
+
+    choice = input("Do you want to enter credentials manually? (y/n): ").strip().lower()
+    if choice == "y":
+        api_key = input("Enter your NCBI API key: ").strip()
+        email = input("Enter your email address: ").strip()
+
+        if api_key and email:
+            set_api_key(api_key, email, load_from_env=False)
+            print("\n✓ API key configured!")
+            print("You can now make up to 10 requests per second.\n")
+        elif email:
+            set_api_key(None, email, load_from_env=False)
+            print("\n✓ Email configured (no API key)")
+            print("Limited to 3 requests per second.\n")
+    else:
+        print("\n⚠ Using default settings (3 requests per second)\n")
 
 
 def simple_search_example():
@@ -236,6 +281,9 @@ def main():
     """Main function to run examples."""
     print("\nPubMed API Examples")
     print("=" * 60)
+
+    # Setup API key first
+    setup_api_key_example()
 
     print("\nSelect example to run:")
     print("1. Simple search (machine learning healthcare)")

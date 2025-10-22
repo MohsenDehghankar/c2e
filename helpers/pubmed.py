@@ -1,13 +1,56 @@
 """
-Simple PubMed API wrapper for searching and retrieving papers.
+PubMed API wrapper for searching and retrieving papers.
 
-Uses the NCBI E-utilities API to search PubMed and fetch article details.
+Uses Biopython's Entrez package to access NCBI E-utilities API.
+Requires an API key for better rate limits (10 requests/sec vs 3 requests/sec).
 """
 
-import requests
+from Bio import Entrez
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 import time
+import os
+from dotenv import load_dotenv
+
+
+# Global settings for Entrez
+Entrez.email = "your.email@example.com"  # Required by NCBI
+Entrez.api_key = None  # Set this with set_api_key() function
+Entrez.tool = "PubMedRetriever"
+
+
+def set_api_key(api_key: str = None, email: str = None, load_from_env: bool = True):
+    """
+    Set the NCBI API key and email for Entrez.
+
+    Get a free API key from: https://www.ncbi.nlm.nih.gov/account/settings/
+
+    Args:
+        api_key: Your NCBI API key (if None and load_from_env=True, reads from .env)
+        email: Your email address (required by NCBI, if None reads from .env)
+        load_from_env: If True, attempts to load from .env file
+
+    Environment variables (in .env file):
+        NCBI_API_KEY: Your NCBI API key
+        NCBI_EMAIL: Your email address
+
+    Example:
+        >>> set_api_key("your_api_key_here", "your.email@example.com")
+        >>> set_api_key()  # Load from .env file
+    """
+    # Load from .env file if requested
+    if load_from_env and (api_key is None or email is None):
+        load_dotenv()
+        if api_key is None:
+            api_key = os.getenv("NCBI_API_KEY")
+        if email is None:
+            email = os.getenv("NCBI_EMAIL")
+
+    # Set the values
+    if api_key:
+        Entrez.api_key = api_key
+    if email:
+        Entrez.email = email
 
 
 @dataclass
@@ -42,25 +85,15 @@ def search_pubmed(keyword: str, top_k: int = 10) -> List[str]:
         >>> print(pmids)
         ['12345678', '87654321', ...]
     """
-    base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-
-    params = {
-        "db": "pubmed",
-        "term": keyword,
-        "retmax": top_k,
-        "retmode": "json",
-    }
-
     try:
-        response = requests.get(base_url, params=params, timeout=10)
-        response.raise_for_status()
+        handle = Entrez.esearch(db="pubmed", term=keyword, retmax=top_k)
+        record = Entrez.read(handle)
+        handle.close()
 
-        data = response.json()
-        pmids = data.get("esearchresult", {}).get("idlist", [])
-
+        pmids = record.get("IdList", [])
         return pmids
 
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         raise Exception(f"Error searching PubMed: {str(e)}")
 
 
@@ -78,43 +111,65 @@ def fetch_paper_details(pmid: str) -> PubMedPaper:
         >>> paper = fetch_paper_details("12345678")
         >>> print(paper.title)
     """
-    base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-
-    params = {
-        "db": "pubmed",
-        "id": pmid,
-        "retmode": "xml",
-    }
-
     try:
-        response = requests.get(base_url, params=params, timeout=10)
-        response.raise_for_status()
+        handle = Entrez.efetch(db="pubmed", id=pmid, retmode="xml")
+        records = Entrez.read(handle)
+        handle.close()
 
-        # Parse XML response (simple parsing)
-        xml_text = response.text
+        if not records.get("PubmedArticle"):
+            raise Exception(f"No article found for PMID {pmid}")
+
+        article = records["PubmedArticle"][0]
+        medline = article["MedlineCitation"]
+        article_data = medline["Article"]
 
         # Extract title
-        title = _extract_xml_tag(xml_text, "ArticleTitle")
+        title = article_data.get("ArticleTitle", "No title available")
 
         # Extract abstract
-        abstract = _extract_xml_tag(xml_text, "AbstractText")
-        if not abstract:
+        abstract_list = article_data.get("Abstract", {}).get("AbstractText", [])
+        if abstract_list:
+            # Handle multiple abstract sections
+            if isinstance(abstract_list, list):
+                abstract = " ".join(str(section) for section in abstract_list)
+            else:
+                abstract = str(abstract_list)
+        else:
             abstract = "No abstract available"
 
         # Extract authors
-        authors = _extract_authors(xml_text)
+        author_list = article_data.get("AuthorList", [])
+        authors = []
+        for author in author_list:
+            if "LastName" in author:
+                fore_name = author.get("ForeName", "")
+                last_name = author.get("LastName", "")
+                full_name = f"{fore_name} {last_name}".strip()
+                authors.append(full_name)
+        if not authors:
+            authors = ["Unknown"]
 
         # Extract journal
-        journal = _extract_xml_tag(xml_text, "Title")  # Journal title
+        journal = article_data.get("Journal", {}).get("Title", "Unknown Journal")
 
         # Extract publication date
-        pub_date = _extract_publication_date(xml_text)
+        pub_date_dict = (
+            article_data.get("Journal", {}).get("JournalIssue", {}).get("PubDate", {})
+        )
+        year = pub_date_dict.get("Year", "")
+        month = pub_date_dict.get("Month", "")
+        day = pub_date_dict.get("Day", "")
+        pub_date = " ".join(filter(None, [year, month, day])) or "Unknown"
 
-        # Extract DOI
-        doi = _extract_doi(xml_text)
-
-        # Extract PMC ID
-        pmc_id = _extract_pmc_id(xml_text)
+        # Extract DOI and PMC ID
+        doi = None
+        pmc_id = None
+        article_ids = article.get("PubmedData", {}).get("ArticleIdList", [])
+        for article_id in article_ids:
+            if article_id.attributes.get("IdType") == "doi":
+                doi = str(article_id)
+            elif article_id.attributes.get("IdType") == "pmc":
+                pmc_id = str(article_id)
 
         # Check if available in PMC
         is_free_in_pmc = False
@@ -141,7 +196,7 @@ def fetch_paper_details(pmid: str) -> PubMedPaper:
             paper_url=paper_url,
         )
 
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         raise Exception(f"Error fetching paper {pmid}: {str(e)}")
 
 
@@ -175,119 +230,16 @@ def get_papers(keyword: str, top_k: int = 10) -> List[PubMedPaper]:
         try:
             paper = fetch_paper_details(pmid)
             papers.append(paper)
-            # Be nice to NCBI servers - add small delay
-            time.sleep(0.34)  # Max 3 requests per second
+            # Rate limiting (with API key: 10 req/s, without: 3 req/s)
+            if Entrez.api_key:
+                time.sleep(0.11)  # ~10 requests per second
+            else:
+                time.sleep(0.34)  # ~3 requests per second
         except Exception as e:
             print(f"Warning: Could not fetch paper {pmid}: {e}")
             continue
 
     return papers
-
-
-# Helper functions for XML parsing
-def _extract_xml_tag(xml_text: str, tag: str) -> str:
-    """Extract content from an XML tag."""
-    start_tag = f"<{tag}>"
-    end_tag = f"</{tag}>"
-
-    start_idx = xml_text.find(start_tag)
-    if start_idx == -1:
-        return ""
-
-    start_idx += len(start_tag)
-    end_idx = xml_text.find(end_tag, start_idx)
-
-    if end_idx == -1:
-        return ""
-
-    return xml_text[start_idx:end_idx].strip()
-
-
-def _extract_authors(xml_text: str) -> List[str]:
-    """Extract author names from XML."""
-    authors = []
-    author_section = xml_text
-
-    while True:
-        last_name = _extract_xml_tag(author_section, "LastName")
-        fore_name = _extract_xml_tag(author_section, "ForeName")
-
-        if not last_name:
-            break
-
-        author_name = f"{fore_name} {last_name}".strip() if fore_name else last_name
-        authors.append(author_name)
-
-        # Move past this author
-        author_idx = author_section.find("</Author>")
-        if author_idx == -1:
-            break
-        author_section = author_section[author_idx + 9 :]
-
-    return authors if authors else ["Unknown"]
-
-
-def _extract_publication_date(xml_text: str) -> str:
-    """Extract publication date from XML."""
-    year = _extract_xml_tag(xml_text, "Year")
-    month = _extract_xml_tag(xml_text, "Month")
-    day = _extract_xml_tag(xml_text, "Day")
-
-    if year:
-        date_parts = [year]
-        if month:
-            date_parts.append(month)
-        if day:
-            date_parts.append(day)
-        return " ".join(date_parts)
-
-    return "Unknown"
-
-
-def _extract_doi(xml_text: str) -> Optional[str]:
-    """Extract DOI from XML."""
-    # Look for DOI in ArticleId elements
-    doi_start = xml_text.find('IdType="doi"')
-    if doi_start == -1:
-        return None
-
-    # Find the ArticleId tag that contains the DOI
-    tag_start = xml_text.rfind("<ArticleId", 0, doi_start)
-    if tag_start == -1:
-        return None
-
-    tag_end = xml_text.find("</ArticleId>", tag_start)
-    if tag_end == -1:
-        return None
-
-    # Extract DOI value
-    content_start = xml_text.find(">", tag_start) + 1
-    doi = xml_text[content_start:tag_end].strip()
-
-    return doi if doi else None
-
-
-def _extract_pmc_id(xml_text: str) -> Optional[str]:
-    """Extract PMC ID from XML."""
-    # Look for PMC ID in ArticleId elements
-    pmc_start = xml_text.find('IdType="pmc"')
-    if pmc_start == -1:
-        return None
-
-    # Find the ArticleId tag that contains the PMC ID
-    tag_start = xml_text.rfind("<ArticleId", 0, pmc_start)
-    if tag_start == -1:
-        return None
-
-    tag_end = xml_text.find("</ArticleId>", tag_start)
-    if tag_end == -1:
-        return None
-
-    # Extract PMC ID value
-    content_start = xml_text.find(">", tag_start) + 1
-    pmc_id = xml_text[content_start:tag_end].strip()
-
-    return pmc_id if pmc_id else None
 
 
 def check_pmc_availability(pmc_id: str) -> bool:
@@ -302,18 +254,12 @@ def check_pmc_availability(pmc_id: str) -> bool:
     """
     try:
         # Try to fetch from PMC
-        base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-        params = {
-            "db": "pmc",
-            "id": pmc_id.replace("PMC", ""),  # Remove PMC prefix
-            "retmode": "xml",
-        }
+        handle = Entrez.efetch(db="pmc", id=pmc_id.replace("PMC", ""), retmode="xml")
+        xml_text = handle.read()
+        handle.close()
 
-        response = requests.get(base_url, params=params, timeout=10)
-        response.raise_for_status()
-
-        # If we get a valid response, it's available
-        return "article" in response.text.lower()
+        # If we get a valid response with article content, it's available
+        return b"article" in xml_text.lower()
 
     except Exception:
         return False
@@ -335,35 +281,36 @@ def fetch_pmc_fulltext(pmc_id: str) -> Optional[str]:
         ...     print(fulltext[:500])
     """
     try:
-        base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-        params = {
-            "db": "pmc",
-            "id": pmc_id.replace("PMC", ""),  # Remove PMC prefix
-            "retmode": "xml",
-        }
+        handle = Entrez.efetch(db="pmc", id=pmc_id.replace("PMC", ""), retmode="xml")
+        xml_text = handle.read()
+        handle.close()
 
-        response = requests.get(base_url, params=params, timeout=30)
-        response.raise_for_status()
+        # Convert bytes to string
+        if isinstance(xml_text, bytes):
+            xml_text = xml_text.decode("utf-8")
 
-        xml_text = response.text
+        # Simple text extraction - remove XML tags
+        import re
 
-        # Extract all text content from body sections
+        # Extract content between body tags
+        body_match = re.search(
+            r"<body>(.*?)</body>", xml_text, re.DOTALL | re.IGNORECASE
+        )
+        abstract_match = re.search(
+            r"<abstract>(.*?)</abstract>", xml_text, re.DOTALL | re.IGNORECASE
+        )
+
         fulltext_parts = []
 
-        # Extract abstract
-        abstract = _extract_xml_tag(xml_text, "abstract")
-        if abstract:
+        if abstract_match:
+            abstract = re.sub(r"<[^>]+>", " ", abstract_match.group(1))
+            abstract = re.sub(r"\s+", " ", abstract).strip()
             fulltext_parts.append(f"ABSTRACT:\n{abstract}")
 
-        # Extract body text
-        body = _extract_xml_tag(xml_text, "body")
-        if body:
-            # Simple text extraction - remove XML tags
-            import re
-
-            text = re.sub(r"<[^>]+>", " ", body)
-            text = re.sub(r"\s+", " ", text).strip()
-            fulltext_parts.append(f"\nFULL TEXT:\n{text}")
+        if body_match:
+            body = re.sub(r"<[^>]+>", " ", body_match.group(1))
+            body = re.sub(r"\s+", " ", body).strip()
+            fulltext_parts.append(f"\nFULL TEXT:\n{body}")
 
         if fulltext_parts:
             return "\n\n".join(fulltext_parts)
