@@ -45,6 +45,23 @@ set_api_key("your_api_key", "your.email@example.com", load_from_env=False)
 
 ## Usage Examples
 
+### Health Fact-Checking Datasets
+
+```bash
+# Quick demo of all three datasets
+python examples/demo_datasets.py
+
+# Comprehensive examples
+python examples/example_load_datasets.py
+```
+
+The project includes loaders for three health-related fact-checking datasets:
+- **HEALTHVER**: Health claim verification dataset
+- **PUBHEALTH**: Public health fact-checking dataset  
+- **SCIFACT**: Scientific fact verification dataset
+
+See [datasets/README.md](datasets/README.md) for detailed information.
+
 ### PubMed Search
 
 ```bash
@@ -61,15 +78,19 @@ python examples/example_use_ollama.py
 
 ```
 c2e/
+├── datasets/
+│   ├── load_datasets.py       # Dataset loaders
+│   └── README.md              # Dataset documentation
 ├── helpers/
-│   ├── llm.py           # Ollama LLM wrapper
-│   └── pubmed.py        # PubMed API integration
+│   ├── llm.py                 # Ollama LLM wrapper
+│   └── pubmed.py              # PubMed API integration
 ├── rag/
-│   ├── base_rag.py      # Abstract RAG base class
-│   └── simple_rag.py    # Simple RAG implementation
+│   └── base_rag.py            # Abstract RAG base class
 ├── examples/
+│   ├── demo_datasets.py       # Quick dataset demo
+│   ├── example_load_datasets.py  # Dataset usage examples
 │   ├── example_pubmed.py      # PubMed usage examples
 │   └── example_use_ollama.py  # LLM usage examples
-├── .env.example         # Environment template
+├── .env.example               # Environment template
 └── requirements.txt
 ```
