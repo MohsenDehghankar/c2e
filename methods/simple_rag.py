@@ -19,7 +19,7 @@ class SimpleRAG(BaseMethod):
 
     def setup(self):
         self.llm = setup_ollama_client(self.llm_host, self.llm_port)
-        set_api_key()
+        set_api_key()  # Ensure PubMed API key is set
 
     def validate_claims(self, claims: List[str]):
         for claim in claims:

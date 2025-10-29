@@ -8,7 +8,7 @@ import os
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from datasets.load_datasets import (
+from dataloader.load_datasets import (
     load_healthver,
     load_pubhealth,
     load_scifact,
