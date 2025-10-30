@@ -1,0 +1,201 @@
+Unnamed: 0,id,claim,evidence_doc_id,evidence_label,evidence_sentences,cited_doc_ids,causal_result_raw,is_medical_causal
+7,12,40mg/day dosage of folic acid and 2mg/day dosage of vitamin B12 does not affect chronic kidney disease (CKD) progression.,33409100,SUPPORT,[8],[33409100],Yes,TRUE
+24,30,A breast cancer patient's capacity to metabolize tamoxifen influences treatment outcome.,24341590,SUPPORT,[10],[24341590],Yes,TRUE
+29,34,A deficiency of folate increases blood levels of homocysteine.,11705328,SUPPORT,[4],[11705328],Yes,TRUE
+32,39,A diminished ovarian reserve does not solely indicate infertility in an a priori non-infertile population.,13497630,SUPPORT,[7],[13497630],Yes,TRUE
+42,41,A high microerythrocyte count protects against severe anemia in homozygous alpha (+)- thalassemia trait subjects.,18174210,SUPPORT,[1 9],[18174210],Yes,TRUE
+45,44,A mutation in HNF4A leads to an increased risk of developing diabetes by the age of 14 years.,56893404,SUPPORT,[3],[56893404],Yes,TRUE
+47,46,A single nucleotide variant the gene DGKK is strongly associated with increased risk of hypospadias.,380526,SUPPORT,[2],[380526],Yes,TRUE
+48,47,A strong bias in the phage genome locations where the spacers were derived has been observed in many CRISPR subtypes that confer the immunity to phage.,26996935,SUPPORT,[6],[ 3512154 26996935],Yes,TRUE
+49,52,ALDH1 expression is associated with poorer prognosis for breast cancer primary tumors.,45638119,SUPPORT,[4],[45638119],Yes,TRUE
+50,55,AMP-activated protein kinase (AMPK) activation reduces inflammation-related fibrosis in the lungs.,49556906,SUPPORT,[5],[49556906],Yes,TRUE
+57,61,ART substantially reduces infectiveness of HIV-positive people.,13899137,SUPPORT,[5],[13899137 13901073],Yes,TRUE
+64,67,Activated Cdk5 phosphorylates the ATM protein in response to DNA damage.,21295300,SUPPORT,[3],[21295300],Yes,TRUE
+66,68,Activated Cdk5 regulates DNA damage-induced neuronal death.,21295300,SUPPORT,[6],[21295300],Yes,TRUE
+69,71,Activation of the Rac1 homolog CED-10 kills viable cells in SRGP-1 mutant Caenorhabditis elegans.,1127562,SUPPORT,[4 5],[1127562],Yes,TRUE
+72,76,Active Ly49Q induces neutrophil polarization.,5531479,SUPPORT,[1],[5531479],Yes,TRUE
+76,78,Active caspase-11 participate in regulating phagosome-lysosome fusion.,5099266,SUPPORT,[7],[5099266],Yes,TRUE
+77,79,Active caspase-11 protein promotes pyroptosis.,5099266,SUPPORT,[3],[5099266],Yes,TRUE
+82,85,Adult tissue-resident macrophages are seeded before birth.,7521113,SUPPORT,[4],[ 7521113 22406695],Yes,TRUE
+86,88,Adult tissue-resident macrophages possess a self-renewing capacity.,7521113,SUPPORT,[4],[ 7521113 22406695],Yes,TRUE
+91,93,Aggravated inflammation is dependent on NLRP3 inflammasome activation.,2692522,SUPPORT,[2],[2692522],Yes,TRUE
+109,108,Amitriptyline is an effective treatment for chronic tension-type headaches.,6191684,SUPPORT,[7],[ 6191684 22995579 23865182],Yes,TRUE
+118,109,An M2-like phenotype in brown adipose tissue macrophages is quickly induced by cold exposure.,4319174,SUPPORT,[5],[4319174],Yes,TRUE
+124,116,Anthrax spores remain deadly until affected areas are decontaminated.,33872649,SUPPORT,[6],[33872649],Yes,TRUE
+128,120,Antidepressants reduce the severity of migraines.,14606752,SUPPORT,[6],[14606752],Yes,TRUE
+131,121,Antimicrobial agents are less effective due to the pressure of antimicrobial usage.,31460499,SUPPORT,[0],[31460499],Yes,TRUE
+139,144,Autologous transplantation of mesenchymal stem cells has better graft function than induction therapy with anti-interleukin-2 receptor antibodies.,10582939,SUPPORT,[8],[10582939],Yes,TRUE
+145,152,B cells go though plasmablast differentiation and antibody production by continuous expression of EBI2.,15488881,SUPPORT,[2],[15488881],Yes,TRUE
+149,155,BCL-2 activation antagonizes the apoptotic effects of c-Myc.,37549932,SUPPORT,[3],[37549932],Yes,TRUE
+152,159,BRCA 1 mutation carriers' risk of breast and ovarian cancer depends on where the mutation is located.,9394119,SUPPORT,[16],[9394119],Yes,TRUE
+154,160,Bacterial meningitis can be diagnosed on the basis of positive cerebrospinal fluid (CSF) cultures.,52874170,SUPPORT,[14],[52874170],Yes,TRUE
+156,164,Bariatric surgery increases rates of colorectal cancer.,5824985,SUPPORT,[11],[5824985],Yes,TRUE
+157,165,Bariatric surgery increases rates of postmenopausal breast cancer.,5824985,SUPPORT,[11],[5824985],Yes,TRUE
+160,167,Bariatric surgery leads to positive outcomes in mental health.,18872233,SUPPORT,[9],[18872233],Yes,TRUE
+164,172,Basophils promote disease development in patients with systemic lupus erythematosus (SLE).,12670680,SUPPORT,[1],[12670680],Yes,TRUE
+171,177,Binding of p53 to enhancer regions (p53BERs) regulates the activity of p53 transcription and cell cycle arrest through the production of p53-dependent eRNAs.,9669099,SUPPORT,[4],[9669099],Yes,TRUE
+180,181,Blocking the interaction between TDP-43 and respiratory complex I proteins ND3 and ND6 prevents TDP-43-induced neuronal loss.,16966326,SUPPORT,[5],[16966326],Yes,TRUE
+182,184,Bone marrow cells don't contribute to adult macrophage compartments.,12827098,SUPPORT,[3],[12827098],Yes,TRUE
+185,189,Broadly HIV-1 Neutralizing Antibodies (bnAb) 10EB have no affinity for phospholipids.,4421578,SUPPORT,[3],[4421578],Yes,TRUE
+186,196,C2 works synergistically with A-769662 to activate dephosphorylated AMPK.,19313533,SUPPORT,[3],[19313533],Yes,TRUE
+189,200,"CD28 initiates tonic signaling in conventional T cells, which causes an exhaustion phenotype and limited efficiency.",18231807,SUPPORT,[4],[18231807],Yes,TRUE
+190,201,CD28 signals regulate trafficking of murine auto-reactive T cells into target tissues.,2462673,SUPPORT,[2],[2462673],Yes,TRUE
+205,220,Ca2+ cycling controls whole-body energy homeostasis in beige fat.,19205437,SUPPORT,[3 4],[19205437],Yes,TRUE
+209,222,Ca2+ cycling is a UCP1-independent thermogenic mechanism.,19205437,SUPPORT,[1],[19205437],Yes,TRUE
+211,223,Cancer cells can stimulate the accumulation of intra-tumoural myeloid-derived suppressor cells by promoting granulocyte colony stimulating factor production.,2014909,SUPPORT,[2],[2014909],Yes,TRUE
+215,227,Cancers that initially benefit from epidermal growth factor receptor targeted therapies later become refractory through several mechanisms.,26973393,SUPPORT,[0],[26973393],Yes,TRUE
+216,228,Cardiac tissue-resident macrophages directly contribute to electrical activity.,4928057,SUPPORT,[1],[4928057],Yes,TRUE
+224,241,Cellular clocks are associated with mitosis timing in NIH 3T3 cells.,2212067,SUPPORT,[3],[ 2212067 10608822],Yes,TRUE
+226,243,"Cellular differentiation of embryonic stem cells is accompanied by changes in replication timing, transcription and nuclear localization.",8148122,SUPPORT,[7],[8148122],Yes,TRUE
+229,246,Charcoal shows no benefit for acute paraquat poisoning.,3430789,SUPPORT,[8],[8447873 3430789],Yes,TRUE
+232,251,Chenodeoxycholic acid treatment increases brown adipose tissue activity.,1568684,SUPPORT,[3],[1568684],Yes,TRUE
+236,256,Chlamydia trachomatis is most prevalent in the UK among sexually-experienced individuals aged 16 to 24.,5850219,SUPPORT,[10],[5850219],Yes,TRUE
+237,258,"Cholesterol loading induces KLF4 expression in VSMCs, resulting in the expression of pro-inflammatory cytokines.",22080671,SUPPORT,[4 5],[22080671],Yes,TRUE
+243,264,Citrullinated proteins externalized in neutrophil extracellular traps act indirectly to perpetuate the inflammatory cycle via induction of autoantibodies.,11328820,SUPPORT,[ 7  8  9 10],[11328820],Yes,TRUE
+253,272,Combination nicotine replacement therapies with varenicline or bupropion are more effective after 12 weeks of reatment compared to varenicline monotherapy.,11614737,SUPPORT,[8],[11614737],Yes,TRUE
+256,280,Comparative transcriptome analysis identified new platelet proteins with structural features suggesting a role in platelet function.,25001628,SUPPORT,[6 7],[25001628],Yes,TRUE
+260,286,Converting apoE4 to apoE3 by gene editing prevents the pathology associated with apoE4 in human iPSCderived neurons.,4709641,SUPPORT,[3],[4709641],Yes,TRUE
+268,296,Cyclin A2 destruction is necessary to switch from unstable to stable kt-mt attachments in mitosis.,4398832,SUPPORT,[5],[4398832],Yes,TRUE
+278,309,DUSP4 increases apoptosis.,7821634,SUPPORT,[6],[7821634],Yes,TRUE
+291,333,Depletion of T-helper 17 (Th17) cells during simian immunodeficiency virus (SIV) infection increases dissemination of Salmonella Typhimurium from the gut.,29023309,SUPPORT,[1],[29023309],Yes,TRUE
+293,334,Depletion of nitric oxide is responsible for vasospasm.,25079962,SUPPORT,[1],[25079962],Yes,TRUE
+296,335,Deregulation of HAND2 is a crucial step in endometrial carcinogenesis in mice.,1780819,SUPPORT,[10],[1780819],Yes,TRUE
+299,339,Dexamethasone increases risk of postoperative bleeding.,23349986,SUPPORT,[10 11],[23349986],Yes,TRUE
+302,340,Diabetes remission occurs less in people treated with conventional therapy than in people treated with laparoscopic adjustable gastric banding surgery.,7098463,SUPPORT,[9],[7098463],Yes,TRUE
+311,347,Differentiation of progenitor cells to myeloid cells is skewed when insulin signaling is suppressed.,11902109,SUPPORT,[5],[11902109],Yes,TRUE
+320,356,Dscam1 acts as a hypervariable pattern-recognition receptor for the immune system.,6144337,SUPPORT,[1],[6144337],Yes,TRUE
+330,366,ERAP1 SNPs are epistatic to HLA alleles for ankylosing spondylitis.,13956305,SUPPORT,[5],[13956305],Yes,TRUE
+331,367,Early patent ductus ateriosus (PDA) screening decreases in-hospital mortality.,27099731,SUPPORT,[10],[27099731],Yes,TRUE
+335,369,"Ectopic expression of Sall4, Nanog, Esrrb, and Lin28 generates induced pluripotent stem cells from mouse embryonic fibroblasts more efficiently than other factor combinations.",6826100,SUPPORT,[4],[6826100],Yes,TRUE
+336,370,Egr2 regulates the homeostasis of B and T cells.,1550937,SUPPORT,[2],[1550937],Yes,TRUE
+340,371,Egr3 regulates the homeostasis of B and T cells.,1550937,SUPPORT,[2],[1550937],Yes,TRUE
+344,372,Eilat virus (EILV) produced in mosquitos elicits rapid and long-lasting neutralizing antibodies in nonhuman primates.,24922825,SUPPORT,[7 8],[24922825],Yes,TRUE
+345,375,Elevated cell-free mitochondrial DNA levels are associated with mortality.,1522647,SUPPORT,[5],[1522647],Yes,TRUE
+350,378,Energy balance requires hypothalamic glutamate neurotransmission.,45154987,SUPPORT,[5],[45154987 10534299 11886686 25007443 17150648],Yes,TRUE
+362,381,Environmental factors can influence the development of breast cancer.,18340282,SUPPORT,[2],[18340282],Yes,TRUE
+364,382,Environmentally-induced senescence is mimicked in disease modeling by adding specific molecules to the culture system.,11659421,SUPPORT,[1 2],[11659421],Yes,TRUE
+372,394,Excess gestational weight gain is associated with obesity-related pregnancy outcomes.,11360768,SUPPORT,[8],[11360768],Yes,TRUE
+378,397,Exercise reduces cancer mortality rates among Chinese citizens.,1456068,SUPPORT,[8],[1456068],Yes,TRUE
+390,414,Female carriers of the Apolipoprotein E4 (APOE4) allele have increased risk for Alzheimer's disease.,6309659,SUPPORT,[12],[6309659],Yes,TRUE
+391,416,Female carriers of the Apolipoprotein E4 (APOE4) allele have longer lifetime exposure to estrogen due to an increased reproductive period.,6309659,SUPPORT,[12],[6309659],Yes,TRUE
+394,420,Fibroblast growth factor 21 protects against atherosclerosis by modulating adiponectin and SREBP2 levels.,9315213,SUPPORT,[5],[9315213],Yes,TRUE
+398,426,Forkhead 0 (fox0) transcription factors are involved in apoptosis.,16728949,SUPPORT,[0],[16728949],Yes,TRUE
+399,428,Forkhead 0 (fox0) transcription factors are involved in cellular differentiation.,16728949,SUPPORT,[0],[16728949],Yes,TRUE
+406,441,G-CSF increases the expansion and infiltration of MDSCs into tumors.,2014909,SUPPORT,[2],[2014909],Yes,TRUE
+407,444,GATA3 regulates cell cycle progression in bone marrow hematopoietic stem cells.,10165258,SUPPORT,[5 6],[10165258],Yes,TRUE
+408,445,GATA3 regulates self-renewal capacity in bone marrow hematopoietic stem cells.,10165258,SUPPORT,[4],[10165258],Yes,TRUE
+412,448,Gastric infection with Helicobacter pylori increases risk of gastric cancer in humans.,2052720,SUPPORT,[6],[2052720],Yes,TRUE
+419,455,Genes involved in pre-mRNA splicing have a significant impact on genome stability.,12643937,SUPPORT,[3],[12643937],Yes,TRUE
+421,458,Genetic deficiency of mast cells leads to decreased weight gain in a mouse model of diet-induced obesity.,597790,SUPPORT,[3],[597790],Yes,TRUE
+422,461,Genetic deletion of JAM-A increases gut permeability.,40096222,SUPPORT,[0],[40096222],Yes,TRUE
+423,463,Genomic aberrations of metastases provide information for targeted therapy.,19736671,SUPPORT,[5],[19736671],Yes,TRUE
+425,469,Glial calcium waves influence seizures.,1410197,SUPPORT,[ 6 10],[1410197],Yes,TRUE
+431,480,Gpr124 suppresses BBB breakdown in mouse models of ischemic stroke.,6325527,SUPPORT,[2],[6325527],Yes,TRUE
+433,482,Guanine nucleotide exchange factors (GEFs) mediate RhoA activation in response to tensional forces on fibronectin-binding integrins.,10991183,SUPPORT,[3],[10991183],Yes,TRUE
+434,483,H.pylori-mediated gastric cancer occurs due to the accumulation of mutations in host epithelial cells.,22703082,SUPPORT,[2],[22703082],Yes,TRUE
+440,488,HAND2 methylation is a key step in early endometrial carcinogenesis.,1780819,SUPPORT,[4],[1780819],Yes,TRUE
+449,495,Having a main partner improves HIV outcomes.,17077004,SUPPORT,[7],[17077004],Yes,TRUE
+460,505,Helicobacter pylori-induced aberrant NF-kB-dependent expression of activation-induced cytidine deaminase contributes to the mutagenesis of host DNA.,22703082,SUPPORT,[1],[22703082],Yes,TRUE
+462,506,Helminths interfere with immune system control of coinfections by microbial pathogens 16.,7433668,SUPPORT,[1],[7433668],Yes,TRUE
+466,515,High levels of CRP lead to a higher risk of exacerbations in chronic obstructive pulmonary disease (COPD).,29564505,SUPPORT,[8],[29564505],Yes,TRUE
+470,524,"Higher plasma levels of I-carnitine, when associated with trimethylamine N-oxide, are positively correlated with cardiovascular events in humans.",14803797,SUPPORT,[1],[14803797],Yes,TRUE
+21,28,A T helper 2 cell (Th2) environment impedes disease development in patients with systemic lupus erythematosus (SLE).,12670680,CONTRADICT,[1],[12670680],Yes,TRUE
+37,40,"A diminished ovarian reserve is a very strong indicator of infertility, even in an a priori non-infertile population.",13497630,CONTRADICT,[7],[13497630],Yes,TRUE
+53,58,APOE4 expression in iPSC-derived neurons results in decreased tau phosphorylation.,4709641,CONTRADICT,[1],[4709641],Yes,TRUE
+54,60,ART has no effect on the infectiveness of HIV-positive people.,13899137,CONTRADICT,[5],[13899137 13901073],Yes,TRUE
+67,69,Activation of PPM1D enhances p53 function.,5956380,CONTRADICT,[5 6],[5956380 4414547],Yes,TRUE
+74,77,Active Ly49Q prevents neutrophil polarization.,5531479,CONTRADICT,[1],[5531479],Yes,TRUE
+95,98,Alirocumab treatment reduces apo(a) fractional clearance rate.,6540064,CONTRADICT,[ 9 10],[6540064],Yes,TRUE
+99,104,Allogeneic mechanical circulatory support is not as effective as autologous mechanical circulatory support for treating acute myocardial infarction.,40164383,CONTRADICT,[8],[40164383],Yes,TRUE
+103,105,Alteration of origin firing causes changes in termination zones of Okazaki fragments.,36606083,CONTRADICT,[3],[36606083],Yes,TRUE
+104,106,Ambulatory blood pressure monitoring is inaccurate at diagnosing hypertension.,25515907,CONTRADICT,[6],[25515907  5151024],Yes,TRUE
+121,112,Angiotensin converting enzyme inhibitors are associated with decreased risk for functional renal insufficiency.,6157837,CONTRADICT,[2],[6157837],Yes,TRUE
+125,119,Antidepressants increase the severity of migraines.,14606752,CONTRADICT,[6],[14606752],Yes,TRUE
+132,122,Antimicrobial agents are more effective due to the pressure of antimicrobial usage.,31460499,CONTRADICT,[0],[31460499],Yes,TRUE
+133,123,Antiretroviral therapy increases rates of tuberculosis across a broad range of CD4 strata.,4883040,CONTRADICT,[8],[4883040],Yes,TRUE
+137,138,Asymptomatic visual impairment screening in elderly populations leads to improved vision.,26016929,CONTRADICT,[7 9],[26016929],Yes,TRUE
+142,149,Autophagy deficiency in the liver increases vulnerability to insulin resistance.,6227220,CONTRADICT,[2],[6227220],Yes,TRUE
+150,156,BCL-2 promotes the apoptotic effects of c-Myc.,37549932,CONTRADICT,[3],[37549932],Yes,TRUE
+158,166,Bariatric surgery leads to negative outcomes in mental health.,18872233,CONTRADICT,[9],[18872233],Yes,TRUE
+162,168,Bariatric surgery reduces colorectal cancer.,5824985,CONTRADICT,[11],[5824985],Yes,TRUE
+163,169,Bariatric surgery reduces postmenopausal breast cancer.,5824985,CONTRADICT,[11],[5824985],Yes,TRUE
+192,203,CD44v6 is not associated with constitutive and reprogrammed cancer stem cells driving cancer metastasis.,9558539,CONTRADICT,[1],[9558539],Yes,TRUE
+207,221,Ca2+ cycling is a UCP1-dependent thermogenic mechanism.,19205437,CONTRADICT,[1],[19205437],Yes,TRUE
+225,242,Cellular clocks are not predictive of mitosis timing in NIH 3T3 cells.,2212067,CONTRADICT,[3],[ 2212067 10608822],Yes,TRUE
+228,245,Charcoal is an effective treatment for acute paraquat poisoning.,3430789,CONTRADICT,[8],[8447873 3430789],Yes,TRUE
+231,250,Chenodeoxycholic acid treatment decreases brown adipose tissue activity.,1568684,CONTRADICT,[3],[1568684],Yes,TRUE
+240,263,Citrullinated proteins externalized in neutrophil extracellular traps act indirectly to disrupt the inflammatory cycle.,11328820,CONTRADICT,[7 9],[11328820 30041340 14853989],Yes,TRUE
+249,267,Cognitive behavioral therapy is an ineffective treatment for insomnia,5912283,CONTRADICT,[7],[ 5912283 31554917],Yes,TRUE
+261,287,Converting apoE4 to apoE3 by gene editing worsens the pathology associated with apoE4 in human iPSCderived neurons.,4709641,CONTRADICT,[3],[4709641],Yes,TRUE
+271,299,Cytochrome c is transferred from cytosol to the mitochondrial intermembrane space during apoptosis.,39381118,CONTRADICT,[0],[39381118],Yes,TRUE
+275,306,DUSP4 decreases apoptosis.,7821634,CONTRADICT,[6],[7821634],Yes,TRUE
+276,308,DUSP4 downregulation deactivates the Ras-ERK pathway,7821634,CONTRADICT,[4 5],[7821634],Yes,TRUE
+283,317,Decreased diastolic blood pressure (DBP) is associated with abdominal aortic aneurysm.,4506414,CONTRADICT,[9],[4506414],Yes,TRUE
+287,330,Deltex has no known interactions with eIF3f.,9505448,CONTRADICT,[6],[9505448],Yes,TRUE
+289,332,Depletion of T-helper 17 (Th17) cells during simian immunodeficiency virus (SIV) infection decreases dissemination of Salmonella Typhimurium from the gut.,29023309,CONTRADICT,[1],[29023309],Yes,TRUE
+305,341,Diabetes remission occurs more in people treated with conventional therapy than in people treated with laparoscopic adjustable gastric banding surgery.,7098463,CONTRADICT,[9],[7098463],Yes,TRUE
+308,342,Diabetic patients with acute coronary syndrome experience decreased short-term and long-term risk for bleeding events.,5884524,CONTRADICT,[5],[7873737 5884524],Yes,TRUE
+310,346,Differentiation of progenitor cells to myeloid cells is skewed upon activation of insulin signaling.,11902109,CONTRADICT,[5],[11902109],Yes,TRUE
+312,349,Diminished ovarian reserve is a reliable indicator of infertility in a non-infertile population.,13497630,CONTRADICT,[7],[13497630],Yes,TRUE
+333,368,Early patent ductus ateriosus (PDA) screening increases in-hospital mortality.,27099731,CONTRADICT,[10],[27099731],Yes,TRUE
+361,379,Enhanced early production of inflammatory chemokines damages viral control in the lung.,19005293,CONTRADICT,[2],[19005293],Yes,TRUE
+375,396,Exercise increases cancer mortality rates among Chinese citizens.,1456068,CONTRADICT,[8],[1456068],Yes,TRUE
+382,400,Exposure to fine particulate air pollution is unrelated to anxiety prevalence.,791050,CONTRADICT,[7],[791050],Yes,TRUE
+389,413,Female carriers of the Apolipoprotein E4 (APOE4) allele have decreased risk for dementia.,6309659,CONTRADICT,[12],[6309659],Yes,TRUE
+392,417,Female carriers of the Apolipoprotein E4 (APOE4) allele have shorter lifetime exposure to estrogen due to a decreased reproductive period.,6309659,CONTRADICT,[12],[6309659],Yes,TRUE
+401,430,FoxO3a activation in neuronal death is inhibited by reactive oxygen species (ROS).,28937856,CONTRADICT,[5],[28937856],Yes,TRUE
+410,447,Gastric infection with Helicobacter pylori decreases risk of gastric cancer in humans.,2052720,CONTRADICT,[6],[2052720],Yes,TRUE
+415,453,General exercise therapy is more effective than rotator cuff exercises in reducing pain and improving function of the shoulder.,4200695,CONTRADICT,[11],[4200695],Yes,TRUE
+416,454,General exercise therapy is more effective than scapular stabilizer exercises in reducing pain and improving function of the shoulder.,4200695,CONTRADICT,[11],[4200695],Yes,TRUE
+424,466,Genomic sequences involved in alternative splicing responsible for Hutchinson-Gilford progeria syndrome (HGPS) are abundant in the ''progerinonly'' allele of Lmna knock-in models.,22544171,CONTRADICT,[0 4 5],[22544171],Yes,TRUE
+430,479,Gpr124 increases BBB breakdown in mouse models of ischemic stroke.,6325527,CONTRADICT,[2],[6325527],Yes,TRUE
+451,498,Having a main partner worsens HIV outcomes.,17077004,CONTRADICT,[7],[17077004],Yes,TRUE
+453,499,HbA1c consistently overestimates glycemic control in black individuals with Sickle cell trait (SCT).,26064662,CONTRADICT,[10],[26064662],Yes,TRUE
+458,500,Headaches are correlated with cognitive impairment.,17930286,CONTRADICT,[12],[17930286],Yes,TRUE
+459,504,Healthy volunteers exhibit rapid and transient increase of cellular ATP after being bolus-injected with fructose.,10883736,CONTRADICT,[11],[10883736],Yes,TRUE
+468,523,"Higher plasma levels of I-carnitine, when associated with trimethylamine N-oxide, are negatively correlated with cardiovascular events in humans.",14803797,CONTRADICT,[1],[14803797],Yes,TRUE
+477,530,"Human embryonic stem cells give rise to cell types from the outer embryonic germ layer, but not the other two layers.",10546779,CONTRADICT,[2],[10546779 25413327 36651210 87610599],Yes,TRUE
+484,537,Hypocretin neurones suppress panicprone state in rats.,16056514,CONTRADICT,[4],[16056514],Yes,TRUE
+485,541,Hypothalamic glutamate neurotransmission is unrelated to energy balance.,45154987,CONTRADICT,[7],[45154987 11886686 25007443],Yes,TRUE
+488,542,"IFI16 impedes STING phosphorylation and translocation, resulting in reduced activation of STING.",19688024,CONTRADICT,[3],[19688024],Yes,TRUE
+495,553,IgA plasma cells that are specific for transglutaminase 2 are scarce in the duodenal mucosa of celiac disease patients when the disease is active.,1471041,CONTRADICT,[3],[1471041],Yes,TRUE
+500,563,"In British Men, haplogroup I decreases risk of cardiovascular disease.",2867345,CONTRADICT,[7],[2867345],Yes,TRUE
+505,566,"In S. cerevisiae, the absence of RNA surveillance pathways reduces sensitivity to high iron conditions.",16120395,CONTRADICT,[1 2],[16120395],Yes,TRUE
+513,571,"In breast cancer, the loss of myoepithelial cells slows the transition of ductal carcinoma in situ to invasive carcinoma.",20333864,CONTRADICT,[2],[20333864],Yes,TRUE
+519,579,"In patients with congenital heart defects, β-blockers significantly improve clinical heart failure outcomes.",34139429,CONTRADICT,[13],[34139429],Yes,TRUE
+525,590,"In young and middle-aged adults, current or remote uses of ADHD medications increase the risk of serious cardiovascular events.",10984005,CONTRADICT,[ 9 10],[10984005],Yes,TRUE
+528,592,Incidence of 10/66 dementia is lower than the incidence of DSM-IV dementia.,14682243,CONTRADICT,[8],[14682243],Yes,TRUE
+529,594,Incidence of heart failure increased by 10% in women since 1979.,19675911,CONTRADICT,[5],[19675911],Yes,TRUE
+532,600,Including pharmacists in rounding teams does not alter the incidence of adverse drug events (ADEs).,12258338,CONTRADICT,[11],[12258338],Yes,TRUE
+544,612,Increased microtubule acetylation exacerbates LRRK2 Roc-COR domain mutation induced locomotor deficits.,9638032,CONTRADICT,[4],[9638032],Yes,TRUE
+547,615,Increased microtubule acetylation worsens interference of axonal transport caused by LRRK2 Roc-COR domain mutations.,9638032,CONTRADICT,[4],[9638032],Yes,TRUE
+561,632,Inhibiting focal adhesion formation enables cells to convert mechanical strain into eventual scarring.,5172048,CONTRADICT,[3],[5172048],Yes,TRUE
+565,633,Inhibiting focal adhesion formation increases the rate at which cells convert mechanical strain into inflammation and fibrosis.,5172048,CONTRADICT,[3],[5172048],Yes,TRUE
+567,635,Inhibiting glucose-6-phospate dehydrogenase improves lipogenesis by deactivating LKB1-AMPK signaling.,1686997,CONTRADICT,[1 2],[1686997],Yes,TRUE
+575,647,Integrated care is ineffective at tackling multiple comorbidities.,15041758,CONTRADICT,[6],[15041758],Yes,TRUE
+592,662,JMJD6 slows the hydroxylation of C-terminal lysine,37204802,CONTRADICT,[3 4 6],[37204802],Yes,TRUE
+604,669,Klf4 is not required for proper myeloid cell differentiation.,25148216,CONTRADICT,[0],[ 6493422 25148216],Yes,TRUE
+616,680,Lack of FGF21 in mice increases life expectancy.,9315213,CONTRADICT,[4],[9315213],Yes,TRUE
+621,683,Lack of FGF21 in mice slows the rate of atherosclerotic plaque formation.,9315213,CONTRADICT,[4],[9315213],Yes,TRUE
+661,745,MafA phosphorylation decreases its ubiquitination.,11291348,CONTRADICT,[5],[11291348],Yes,TRUE
+663,747,MafA ubiquitination decreases the recruitment of coavtivator P/CAF by MafA.,11291348,CONTRADICT,[6],[11291348],Yes,TRUE
+676,764,Medications to treat obesity are highly effective.,7552215,CONTRADICT,[8],[7552215],Yes,TRUE
+678,765,Medications to treat obesity do not have side effects.,7552215,CONTRADICT,[10],[7552215],Yes,TRUE
+684,767,Men are more susceptible to death due to pneumonia when compared to women.,2488880,CONTRADICT,[10],[2488880],Yes,TRUE
+685,771,Metastatic colorectal cancer treated with a single agent fluoropyrimidines resulted in similar efficacy and better quality of life when compared with oxaliplatin-based chemotherapy in elderly patients.,15476777,CONTRADICT,[16],[15476777],Yes,TRUE
+686,772,Mice are incapable of producing neutralizing antibodies in reponse to the Chikungunya virus (CHIKV) produced in mosquitos.,24922825,CONTRADICT,[7],[24922825],Yes,TRUE
+690,778,Mice lacking Sirt1 in Sf1-expressing neurons are immune to diet-induced obesity and insulin resistance.,13001323,CONTRADICT,[2 3],[13001323],Yes,TRUE
+714,801,Monoclonal antibody targeting of N-cadherin encourages castration resistance.,22180793,CONTRADICT,[5],[22180793],Yes,TRUE
+715,802,Monoclonal antibody targeting of N-cadherin encourages metastasis.,22180793,CONTRADICT,[4],[22180793],Yes,TRUE
+726,816,Mutations in RIM1 raise levels of IME1 RNA.,8148304,CONTRADICT,[1],[8148304],Yes,TRUE
+732,825,N348I mutations reduce resistance to nevirapine.,15319019,CONTRADICT,[13],[15319019],Yes,TRUE
+735,835,NR5A2 does not play a role in development of endometrial tissues.,15928989,CONTRADICT,[5 6],[15928989],Yes,TRUE
+738,840,Natriuretic peptides increase susceptibility to diabetes.,15663829,CONTRADICT,[4 7],[15663829],Yes,TRUE
+747,855,Noninvasive positive pressure ventilation is not predictive of acute respiratory failure after solid organ transplantation.,8190282,CONTRADICT,[8],[8190282],Yes,TRUE
+751,856,Nonsteroidal antinflammatory drugs are ineffective as cancer treatments.,43334921,CONTRADICT,[6],[43334921],Yes,TRUE
+760,861,Normal granulomas form in the presence of TNF in Zebrafish.,16066726,CONTRADICT,[4],[16066726],Yes,TRUE
+770,881,Omnivores produce less trimethylamine N-oxide from dietary I-carnitine than vegans.,14803797,CONTRADICT,[2],[14803797],Yes,TRUE
+775,886,One in two surgical randomized controlled trials are discontinued early.,6477536,CONTRADICT,[10],[6477536],Yes,TRUE
+793,909,PKG-la does not have a large impact on expression of pain hypersensitivity in PGK-la knockout mice.,11254556,CONTRADICT,[3],[11254556],Yes,TRUE
+795,910,PKG-la does not have a large impact on expression of spinal long term potentiation in PGK-la knockout mice.,11254556,CONTRADICT,[5],[11254556],Yes,TRUE
+804,925,Patients in stable partnerships progress from HIV to death at the same rate as patients not in partnerships.,17077004,CONTRADICT,[7],[17077004],Yes,TRUE
