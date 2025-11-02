@@ -5,4 +5,4 @@ biopython>=1.80
 python-dotenv>=1.0.0
 pandas>=2.0.0
 gdown>=4.7.0
-
+tqdm
